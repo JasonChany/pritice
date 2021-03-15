@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>rest参数</title>
+</head>
+<body>
+<script>
+    //ES6引入rest参数，用于获取函数的实参未声明的部分（例：形参为2个，实参为3个），用来代替arguments
+    //ES5获取实参方式，直接在函数内部即可调用，agguments实际是一个对象，获取的实际是所有实参的值（未声明与已声明的值都会包含进去）
+    function argu(a,b) {
+        //console.log(a)
+        //console.log(b)
+        console.log(arguments)
+    }
+    argu(1,2,3)
+
+    //rest参数，需要使用"...args"的方式写在参数列表的末尾。实际是一个数组
+    function rest(a,b,...args) {
+        //console.log(a)
+        //console.log(b)
+        console.log(args)
+    }
+    rest('hello','word','other')
+</script>
+</body>
+</html>
